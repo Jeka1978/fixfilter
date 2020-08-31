@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
  * @author Evgeny Borisov
  */
 @Service
-@ForFrontend
+@FrontendController
 public class MyA {
     public void abc(){
         System.out.println();

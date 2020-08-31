@@ -11,8 +11,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 /**
  * @author Evgeny Borisov
  */
-@Component
-public class FrontEndControllerAdvice implements ResponseBodyAdvice {
+@ControllerAdvice(annotations = FrontendController.class)
+public class FrontEndControllerAdvice implements ResponseBodyAdvice<Object> {
     @Override
     public boolean supports(MethodParameter methodParameter, Class aClass) {
         return true;

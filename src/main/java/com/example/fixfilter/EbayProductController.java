@@ -1,11 +1,10 @@
 package com.example.fixfilter;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@FrontendController
 public class EbayProductController {
 
     @PostMapping("/product")
@@ -14,7 +13,6 @@ public class EbayProductController {
     }
 
     @PostMapping("/person")
-    @ForFrontend
     public Person printPerson(@RequestBody Person person) {
         System.out.println("person = " + person);
         return person;
